@@ -1,5 +1,5 @@
-<%= simple_form_for @task, remote: true do |f| %>
-  <%= f.input :description %>
-  <%= f.input :deadline %>
+<%= form_for @task, remote: true do |f| %>
+  <%= f.text_field :description, placeholder: "Task" %>
+  <%= f.datetime_field :deadline, id: 'datetimepicker1', placeholder: "Due Date" %>
   <%= f.button :submit %>
 <% end %>
